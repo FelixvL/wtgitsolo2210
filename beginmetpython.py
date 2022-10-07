@@ -52,4 +52,4 @@ cur = conn.cursor()
 cur.execute("SELECT * FROM huis")
 for huis in cur:
     print(huis[1])
-    print("iets anders derde veride")
+    print("iets anders derde veride vijfde")
