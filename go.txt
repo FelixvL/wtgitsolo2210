@@ -1,0 +1,20 @@
+VANDAAG
+
+git X
+github x
+
+vs code  IDE x   (atom notepad++ sublime)
+
+python - pip  (anaconda)
+
+
+
+
+VERDER
+XAMPP  windows
+MAMP(niet pro)   Mac
+
+Eclipse  vs  IntelliJ
+
+OOP(SoftwareDeveloper)
+Postman

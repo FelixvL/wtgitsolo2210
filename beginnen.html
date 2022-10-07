@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="mijncss.css">
+		<script src="mijnscript.js"></script>
+		<script>
+			var amounttimesclicked = 0; // globale variable
+			var globalNamenArray = [];
+			function heey(){
+				alert("heeeeyyy");
+			}
+			function ietsMetArray(){
+				var deDOM = document.getElementsByClassName("hup");
+				console.log(deDOM);
+				for(var x = 0; x < deDOM.length; x++){
+					deDOM[x].innerHTML = "doei";
+					deDOM[x].style.backgroundColor = "red";
+					deDOM[x].onclick = heey;
+				}
+				document.getElementById("onzediv").innerHTML = "";
+				var ingegeven = document.getElementById("invoerveld").value;
+				globalNamenArray.push(ingegeven);
+				for(var q = 0; q < globalNamenArray.length; q++){
+					document.getElementById("onzediv").innerHTML += globalNamenArray[q]+"<br>";
+				}
+			}
+
+
+
+			function startmaar(){
+				var aantalxgeklikt = 1;  // locale variabele
+				//document.getElementById("onzediv").innerHTML = "yes" + aantalxgeklikt++;
+				// 2 dingen kiezen boolean if       loopen 
+				if(amounttimesclicked == 5){
+					alert("je hebt vijf keer geklikt");
+					wis();
+				}else{
+					console.log("niet waar");
+					document.getElementById("onzediv").innerHTML = "yes" + amounttimesclicked++;
+				}
+
+				for(var x = 0;    x < 10   ; x++){
+					console.log("dit print ik: "+ ++x);
+				
+				
+				
+				
+				
+				
+				}
+
+				var getallen = [23, 12, 16, 77, 12, 3];
+				console.log( getallen[3] );
+
+				for( var y = 0; y < getallen.length ; y++){
+					console.log( getallen[y]  );
+					document.getElementById("onzediv").innerHTML +=  `<h1>  ${getallen[y]} </h1>`;
+
+				}
+			}
+			function wis(){
+				// localStorage     Database
+				amounttimesclicked = 0;
+			}
+			function changeimg(){
+				document.getElementById("hetplaatje").src = "img2.jpg"
+			}
+		</script>
+	</head>
+	<body>
+		<img src="img1.jpg" width="400px" id="hetplaatje">
+		<button onclick="changeimg()">change</button>
+		<hr>
+		<input type="text" id="invoerveld">
+		<input type="button" onclick="ietsMetArray()" value="go Array">
+
+		<hr>
+		<input type=button value="Klik hier" onclick="startmaar()">
+		<input type=button value="Wissen" onclick="wis()">
+		<div id="onzediv"></div>
+		<h1 class="hup">ene</h1>
+		<h1 class="hup" >andere</h1>
+	</body>
+</html>
